@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Greetings</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary-color: #9c27b0; 
+            --accent-color: #ffeb3b; 
+            --text-color: #5e1a78; 
+            --light-color: #fff8e1; 
+            --highlight: #ff9800;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: sans-serif;
+            background: linear-gradient(135deg, var(--light-color) 0%, #f3e5f5 100%);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+     
+        .birthday-cake {
+            font-size: 120px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+            animation: pulse 2s infinite;
+        }
+        
+        .birthday-cake:hover {
+            transform: scale(1.1);
+        }
+        
+        .hidden-message {
+            display: none;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+            box-shadow: 0 8px 20px rgba(156, 39, 176, 0.2);
+            border: 2px solid var(--primary-color);
+            max-width: 600px;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        footer {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            margin-top: 20px;
+            text-align: center;
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday po !!!</h1>
+    <div class="birthday-cake" onclick="showMessage()">🎂</div>
+    
+    <div id="specialMessage" class="hidden-message">
+        
+        <p><h2>Hiiiii pooo, happy happy birthday !!!</h2></p> 
+        <p><h2>Enjoy ur day po and live happily ever after with me !!! hehe</h2></p>
+        <br>
+        <p>ps. Hoping na makita at makasama kita soon!!!</p>
+        <br>
+        <p><h2>HAPPY BIRTHDAYY ULIIIIT! ❤️</h2></p>
+    </div>
+    
+    <footer>
+        <p> to my baby 👆</p>
+    </footer>
+    
+    <script>
+        function showMessage() {
+            const message = document.getElementById('specialMessage');
+            message.style.display = message.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
